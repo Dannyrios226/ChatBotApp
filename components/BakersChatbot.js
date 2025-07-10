@@ -17,7 +17,7 @@ export default function BakersChatbot() {
     setMessages([
       {
         _id: 1,
-        text: "Hello, I am Baker's Chatbot! Say 'Yes' to play dog trivia!",
+        text: "Woof, I am Baker's Chatbot! Say 'Yes' to play dog trivia!",
         createdAt: new Date(),
         user: CHATBOT_USER_OBJ,
       },
