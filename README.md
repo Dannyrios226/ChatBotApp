@@ -7,10 +7,10 @@ In this lab, we're going to be combining the two labs we worked on last week. In
 1. Click "Use as Template" and use the name "snapchatbots-yourname"
 2. Clone from your new repo into your desired folder with terminal
 3. Open the project code in VSCode (use `code .` if you can)
-4. Open terminal in the VSCode window then run `npm` to install packages
+4. Open terminal in the VSCode window then run `npm install` to install packages
 5. Launch the project with `npx expo start`
 
-You will not need to setup Spotify because I used some dummy data for the tracks
+You do not need to setup Spotify because the "songs" are now chatbots!
 
 ## Milestones
 
