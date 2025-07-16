@@ -7,7 +7,7 @@ import {
   Pressable,
 } from "react-native";
 import { Themes } from "../assets/Themes";
-import { millisToMinutesAndSeconds } from "../utils";
+// import { millisToMinutesAndSeconds } from "../utils";
 import { useNavigation } from "@react-navigation/native";
 
 const SongArtists = ({ SongArtists }) => {
@@ -23,8 +23,7 @@ const Song = ({
   imageUrl,
   songTitle,
   songArtists,
-  albumName,
-  duration,
+  albumName
 }) => {
   const navigation = useNavigation();
 
@@ -49,12 +48,12 @@ const Song = ({
           </Text>
           <SongArtists SongArtists={songArtists} />
         </View>
-        <Text style={[styles.albumName]} numberOfLines={1}>
+        {/* <Text style={[styles.albumName]} numberOfLines={1}>
           {albumName}
-        </Text>
-        <Text style={[styles.duration]} numberOfLines={1}>
+        </Text> */}
+        {/* <Text style={[styles.duration]} numberOfLines={1}>
           {millisToMinutesAndSeconds(duration)}
-        </Text>
+        </Text> */}
       </View>
     </Pressable>
   );
@@ -93,18 +92,6 @@ const styles = StyleSheet.create({
   songArtists: {
     color: Themes.colors.gray,
     fontSize: 12,
-  },
-  albumName: {
-    color: Themes.colors.white,
-    flex: 0.25,
-    fontSize: 12,
-    margin: 5,
-  },
-  duration: {
-    color: Themes.colors.gray,
-    flex: 0.1,
-    fontSize: 12,
-    margin: 5,
   },
 });
 

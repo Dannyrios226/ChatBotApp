@@ -3,6 +3,8 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, SafeAreaView, Platform, Text } from "react-native";
 import BasicChatbot from "../components/BasicChatbot";
 import BakersChatbot from "../components/BakersChatbot";
+import DannysChatbot from "../components/DannysChatbot";
+import ChanhoChatBot from "../components/ChanhoChatBot";
 
 // prettier-ignore
 export const CHATBOTS = {
@@ -17,6 +19,18 @@ export const CHATBOTS = {
     name: "Baker's Dog Trivia",
     imageUrl: "https://img.freepik.com/free-vector/cute-dog-robot-cartoon-character-animal-technology-isolated_138676-3143.jpg?w=150",
     component: BakersChatbot,
+  },
+  "DannysChatbot": {
+    id: "DannysChatbot",
+    name: "Danny's Trivia",
+    imageUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/9c/af/8f/9caf8f36-9ad8-2a10-84ab-5a57d031ede0/App_Icon-marketing.lsr/1200x630bb.png",
+    component: DannysChatbot,
+  },
+    "ChanhoChatBot": {
+    id: "ChanhoChatBot",
+    name: "Chanhos Triva",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/8/8b/Jackie_Chan_July_2016.jpg",
+    component: ChanhoChatBot,
   }
 };
 
