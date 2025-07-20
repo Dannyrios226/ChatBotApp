@@ -24,13 +24,14 @@ export default function BasicChatbot() {
 
  async function fetchInitialMessage() {
   
-  console.log("FETCH GOT CALLED");
+  console.log(message);
     const response = await getChat(prompt);
     const message = response.choices[0].message;
     console.log("message: ", message);
     const content = response.choices[0].message.content;
     console.log("content: ", content);
-    addBotMessage(content); 
+    console.log("Formatted Array: ", formattedGPTArray)
+    addBotMessage(content); //added for lets chat with chatpgt step 
   };
 
   useEffect(() => {
@@ -70,7 +71,30 @@ export default function BasicChatbot() {
 
     // Simple chatbot logic (aka Checkpoint 2 onwards) here!
 
-    addBotMessage("I am da response!");
+   const newMessage = messages.map((objectInArray => {
+    if (objectInArray.user._id ==1 ){
+      return{
+        role: "user",
+        content : objectInArray.text
+      }
+    }
+    else {
+  return{
+    role: "assistant",
+    content: objectInArray.text
+    }
+
+  };
+    }));
+
+const formattedGPTArray = [{
+  role: "user",
+  content: userMessages[0].text,
+}, ...newMessage]
+
+console.log("NewMessage:", formattedGPTArray)
+    getChat(formattedGPTArray)
+    
   };
 
   const onSend = useCallback((messages = []) => {
