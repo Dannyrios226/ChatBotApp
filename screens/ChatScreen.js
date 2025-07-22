@@ -5,13 +5,16 @@ import BasicChatbot from "../components/BasicChatbot";
 import BakersChatbot from "../components/BakersChatbot";
 import DannysChatbot from "../components/DannysChatbot";
 import ChanhoChatBot from "../components/ChanhoChatBot";
+import { CHATGPT_KEY } from '@env';
+//import SEA_SSAChatBot from  "../components/SEA_SSAChatBot";
 
 // prettier-ignore
 export const CHATBOTS = {
+  
   "BasicChatbot": {
     id: "BasicChatbot",
-    name: "React Native Chatbot",
-    imageUrl: "https://loremflickr.com/140/140",
+    name: "Mine Swipe",
+    imageUrl: "https://static.vecteezy.com/system/resources/previews/060/512/971/non_2x/retro-pixel-art-bomb-icon-with-lit-fuse-classic-game-style-vector.jpg",
     component: BasicChatbot,
   },
   "BakersChatbot": {
@@ -32,11 +35,18 @@ export const CHATBOTS = {
     imageUrl: "https://upload.wikimedia.org/wikipedia/commons/8/8b/Jackie_Chan_July_2016.jpg",
     component: ChanhoChatBot,
   }
+  //   "SEA_SSAChatBot": {
+  //   id: "SEA_SSAChatBot",
+  //   name: "Imagining Reconnection Chatbot",
+  //   imageUrl: "https://attractionsmagazine.com/wp-content/uploads/2021/05/unnamed-1-500x500.png",
+  //   component: SEA_SSAChatBot,
+  // },
 };
 
 export default function ChatScreen({ route }) {
-  const { chatbotName } = route.params;
+  console.log("Your ChatGPT API key:", CHATGPT_KEY, "log is on line37 in chatScreen.js");
 
+  const { chatbotName } = route.params;
   const makeChatbotComponent = (chatbotName) => {
     if (CHATBOTS[chatbotName]) {
       const Chatbot = CHATBOTS[chatbotName].component;

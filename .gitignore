@@ -35,3 +35,8 @@ yarn-error.*
 
 # typescript
 *.tsbuildinfo
+
+#additions after milestone finished for week-5 Day-4
+.env
+babel.config.jksreact-native-dotenv
+--save-dev
