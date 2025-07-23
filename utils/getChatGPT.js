@@ -1,9 +1,9 @@
-import { CHATGPT_KEY } from "@env";
+
 
 var myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
 myHeaders.append("Accept", "application/json");
-myHeaders.append("Authorization", `Bearer ${CHATGPT_KEY}`);
+myHeaders.append("Authorization", `Bearer ${process.env.EXPO_PUBLIC_CHATGPT_KEY}`);
 export const getChat = async (messages) => {
   const raw = JSON.stringify({
     model: "gpt-4.1-nano",

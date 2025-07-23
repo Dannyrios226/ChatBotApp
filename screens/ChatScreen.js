@@ -5,7 +5,6 @@ import BasicChatbot from "../components/BasicChatbot";
 import BakersChatbot from "../components/BakersChatbot";
 import DannysChatbot from "../components/DannysChatbot";
 import ChanhoChatBot from "../components/ChanhoChatBot";
-import { CHATGPT_KEY } from '@env';
 //import SEA_SSAChatBot from  "../components/SEA_SSAChatBot";
 
 // prettier-ignore
@@ -44,7 +43,6 @@ export const CHATBOTS = {
 };
 
 export default function ChatScreen({ route }) {
-  console.log("Your ChatGPT API key:", CHATGPT_KEY, "log is on line37 in chatScreen.js");
 
   const { chatbotName } = route.params;
   const makeChatbotComponent = (chatbotName) => {
